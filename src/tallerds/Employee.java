@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Employee {   //remuneracion mensual unificada
 
-    private final float rmu = (float) 386.0;
+    private final float rmu = (float) 15;
     //salario del employee
     private float salary;
     private String currency;
@@ -56,7 +56,7 @@ public class Employee {   //remuneracion mensual unificada
                 //el décimo junto con su salario y un bono
                 return month % 2 == 0 ? valueM : valueM + rmu / 12 * 2;
         }
-        return 0.0F;
+        return salario;
     }
 
     //calcula el bono de fin de año
@@ -80,37 +80,5 @@ public class Employee {   //remuneracion mensual unificada
         return 0.0F;
     }
 
-    public float getSalary() {
-        return salary;
-    }
-
-    public void setSalary(float salary) {
-        this.salary = salary;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
-    public float getBonusPercentage() {
-        return bonusPercentage;
-    }
-
-    public void setBonusPercentage(float bonusPercentage) {
-        this.bonusPercentage = bonusPercentage;
-    }
-
-    public EmployeeType getEmployeeType() {
-        return employeeType;
-    }
-
-    public void setEmployeeType(EmployeeType employeeType) {
-        this.employeeType = employeeType;
-    }
-    
     
 }

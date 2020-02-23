@@ -41,28 +41,38 @@ public class EmployeeTest {
      * Test of cs method, of class Employee.
      */
     @Test
-    public void testCs() {
+    public void testCsWorker() {
         System.out.println("cs");
-        Employee instance = null;
-        float expResult = 0.0F;
+        Employee instance = new Employee(50,"USD",100,EmployeeType.Worker);
+        float expResult = 50.0f;
         float result = instance.cs();
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
-
-    /**
-     * Test of CalculateYearBonus method, of class Employee.
-     */
+    
     @Test
-    public void testCalculateYearBonus() {
-        System.out.println("CalculateYearBonus");
-        Employee instance = null;
-        float expResult = 0.0F;
-        float result = instance.CalculateYearBonus();
+    public void testCsSupervisor() {
+        System.out.println("cs");
+        Employee instance = new Employee(50,"USD",100,EmployeeType.Supervisor);
+        float expResult = 85f;
+        float result = instance.cs();
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
+    @Test
+    public void testCsManager() {
+        System.out.println("cs");
+        Employee instance = new Employee(50,"USD",100,EmployeeType.Manager);
+        float expResult = 120f;
+        float result = instance.cs();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        
+    }
+    
+
+
     
 }

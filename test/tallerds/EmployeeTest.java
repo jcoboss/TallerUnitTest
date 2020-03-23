@@ -40,6 +40,7 @@ public class EmployeeTest {
     /**
      * Test of cs method, of class Employee.
      */
+    
     @Test
     public void testCsWorker() {
         System.out.println("cs");
@@ -72,6 +73,37 @@ public class EmployeeTest {
         
     }
     
+    @Test
+    public void testCsWorkerMarch() {
+        System.out.println("cs");
+        Employee instance = new Employee(50,"USD",100,EmployeeType.Worker);
+        float expResult = 52.5f;
+        float result = instance.cs();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        
+    }
+    
+    @Test
+    public void testCsSupervisorMarch() {
+        System.out.println("cs");
+        Employee instance = new Employee(50,"USD",100,EmployeeType.Supervisor);
+        float expResult = 87.5f;
+        float result = instance.cs();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        
+    }
+    @Test
+    public void testCsManagerMarch() {
+        System.out.println("cs");
+        Employee instance = new Employee(50,"USD",100,EmployeeType.Manager);
+        float expResult = 122.5f;
+        float result = instance.cs();
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        
+    }
 
 
     
